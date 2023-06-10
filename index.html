@@ -7,25 +7,38 @@
     <title>CRM-ShopOnline</title>
   </head>
   <body>
-    <header>
-      <h1>Добавить товар</h1>
-      <form action="https://jsonplaceholder.typicode.com/posts" method="POST">
+    <div class="add-product">
+      <p>Добавить товар</p>
+      <form name="addProduct" action="https://jsonplaceholder.typicode.com/posts" method="POST">
         <fieldset>
-          <label>Наименования <input type="text" name="name" /></label>
-          <label>Категория <input type="text" name="category" /></label>
-          <label>Единицы измерения <input type="text" name="units" /></label>
-          <label
-            >Дисконт
-            <input type="checkbox" />
-          </label>
-          <input type="text" disabled />
-          <label>Описание<textarea name="description"></textarea></label>
-          <label>Колличество<input type="number" name="count" /></label>
-          <label>Цена<input type="number" name="price" /></label>
+          <label for="name">Наименования</label>
+          <input type="text" name="name" id="name" required />
+
+          <label for="category">Категория</label>
+          <input type="text" name="category" id="category" required />
+
+          <label for="units">Единицы измерения</label>
+          <input type="text" name="units" id="units" required />
+
+          <label for="discount">Дисконт</label>
+          <div class="discount-window">
+            <input type="checkbox" aria-label="Добавить скидку" required />
+            <input type="text" name="discount" id="discount" disabled required />
+          </div>
+
+          <label for="description">Описание</label>
+          <textarea name="description" id="description" rows="6" required></textarea>
+
+          <label for="count">Колличество</label>
+          <input type="number" name="count" id="count" required />
+
+          <label for="price">Цена</label>
+          <input type="number" name="price" id="price" required />
+
           <input type="file" name="image" accept="image/jpg" />
         </fieldset>
-        <input type="submit" value="Добавить товар" />
+        <button type="submit" name="addProductButton">Добавить товар</button>
       </form>
-    </header>
+    </div>
   </body>
 </html>
