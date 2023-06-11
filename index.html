@@ -7,7 +7,7 @@
     <title>CRM-ShopOnline</title>
   </head>
   <body>
-    <div class="add-product">
+    <div class="modal-add-product">
       <p>Добавить товар</p>
       <form name="addProduct" action="https://jsonplaceholder.typicode.com/posts" method="POST">
         <fieldset>
@@ -21,7 +21,7 @@
           <input type="text" name="units" id="units" required />
 
           <label for="discount">Дисконт</label>
-          <div class="discount-window">
+          <div class="add-discount">
             <input type="checkbox" aria-label="Добавить скидку" required />
             <input type="text" name="discount" id="discount" disabled required />
           </div>
@@ -37,7 +37,7 @@
 
           <input type="file" name="image" accept="image/jpg" />
         </fieldset>
-        <button type="submit" name="addProductButton">Добавить товар</button>
+        <button type="submit">Добавить товар</button>
       </form>
     </div>
   </body>
